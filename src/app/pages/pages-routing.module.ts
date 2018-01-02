@@ -5,7 +5,7 @@ import {RouterModule,Routes} from '@angular/router'
 import {HomeComponent} from './components/home/home.component'
 import {PagesComponent} from './pages.component'
 
-const authRoutes:Routes = [
+const pagesRoutes:Routes = [
     {
         path:'web',
         component : PagesComponent,
@@ -13,12 +13,11 @@ const authRoutes:Routes = [
             {path: "home",component : HomeComponent}
         ]
     }
-
 ]
 
 @NgModule({
     imports: [
-        RouterModule.forChild(authRoutes)
+        RouterModule.forChild(pagesRoutes)
     ],
     exports : [RouterModule]
 })

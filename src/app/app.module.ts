@@ -11,6 +11,7 @@ import { NbThemeModule } from '@nebular/theme';
 import { AuthModule } from './auth/auth.module';
 import { PagesModule } from './pages/pages.module';
 
+
 @NgModule({
   declarations: [
     AppComponent
@@ -23,7 +24,7 @@ import { PagesModule } from './pages/pages.module';
     CommonModule,
     FormsModule,
     NgbModule.forRoot(),
-    NbThemeModule.forRoot({ name: 'default' })
+    NbThemeModule.forRoot({ name: 'cosmic' })
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]

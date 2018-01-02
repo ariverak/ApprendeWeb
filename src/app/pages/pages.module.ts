@@ -8,6 +8,8 @@ import { pagesComponents } from './components';
 import { PagesComponent } from './pages.component';
 import {PagesRoutingModule} from './pages-routing.module'
 
+import { ThemeModule } from '../theme/theme.module';
+
 import { NbThemeModule,NbCardModule,NbCheckboxModule,NbLayoutModule } from '@nebular/theme';
 const NB_MODULES = [
   NbCardModule,NbCheckboxModule,NbLayoutModule
@@ -15,8 +17,9 @@ const NB_MODULES = [
 
 @NgModule({
     imports : [
-        NbThemeModule.forRoot({name:"default"}),
+        NbThemeModule.forRoot({name:"cosmic"}),
         NgbModule.forRoot(),
+        ThemeModule.forRoot(),
         PagesRoutingModule,
         CommonModule,
         FormsModule,
