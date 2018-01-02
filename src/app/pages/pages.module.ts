@@ -4,9 +4,9 @@ import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http'; 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { authComponents } from './components';
-import { AuthComponent } from './auth.component';
-import {AuthRoutingModule} from './auth-routing.module'
+import { pagesComponents } from './components';
+import { PagesComponent } from './pages.component';
+import {PagesRoutingModule} from './pages-routing.module'
 
 import { NbThemeModule,NbCardModule,NbCheckboxModule,NbLayoutModule } from '@nebular/theme';
 const NB_MODULES = [
@@ -17,12 +17,12 @@ const NB_MODULES = [
     imports : [
         NbThemeModule.forRoot({name:"default"}),
         NgbModule.forRoot(),
-        AuthRoutingModule,
+        PagesRoutingModule,
         CommonModule,
         FormsModule,
         HttpModule,
         ...NB_MODULES
     ],
-    declarations : [...authComponents,AuthComponent]
+    declarations : [...pagesComponents,PagesComponent]
 })
-export class AuthModule{}
+export class PagesModule{}

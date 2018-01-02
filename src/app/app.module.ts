@@ -9,6 +9,7 @@ import { FormsModule }   from '@angular/forms';
 import { routing,appRoutingProviders } from './app.routing';
 import { NbThemeModule } from '@nebular/theme';
 import { AuthModule } from './auth/auth.module';
+import { PagesModule } from './pages/pages.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { AuthModule } from './auth/auth.module';
     routing,
     BrowserModule,
     AuthModule,
+    PagesModule,
     CommonModule,
     FormsModule,
     NgbModule.forRoot(),
