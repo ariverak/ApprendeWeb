@@ -1,9 +1,13 @@
+import { CommonModule } from '@angular/common';  
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
-import { NbThemeModule } from '@nebular/theme';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
+import { FormsModule }   from '@angular/forms';
+import { routing,appRoutingProviders } from './app.routing';
+import { NbThemeModule } from '@nebular/theme';
 import { AuthModule } from './auth/auth.module';
 
 @NgModule({
@@ -11,11 +15,15 @@ import { AuthModule } from './auth/auth.module';
     AppComponent
   ],
   imports: [
+    routing,
     BrowserModule,
-    NbThemeModule.forRoot({ name: 'default' }),
-    AuthModule
+    AuthModule,
+    CommonModule,
+    FormsModule,
+    NgbModule.forRoot(),
+    NbThemeModule.forRoot({ name: 'default' })
   ],
-  providers: [],
+  providers: [appRoutingProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
