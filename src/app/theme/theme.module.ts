@@ -17,6 +17,7 @@ import {   NbActionsModule,
     NbThemeModule,
     NbUserModule,
     NbCheckboxModule,NbSidebarService,NbMenuService} from '@nebular/theme';
+import { NbMenuInternalService } from '@nebular/theme/components/menu/menu.service';
 const NB_MODULES = [
     NbActionsModule,
     NbCardModule,
@@ -27,7 +28,7 @@ const NB_MODULES = [
     NbSidebarModule,
     NbTabsetModule,
     NbUserModule,
-    NbCheckboxModule,
+    NbCheckboxModule
 ]
 
 
@@ -42,7 +43,7 @@ const NB_MODULES = [
     ],
     providers: [],
     declarations : [...themeComponents,ThemeLayoutComponent],
-    exports : [...themeComponents,ThemeLayoutComponent]
+    exports : [...themeComponents,ThemeLayoutComponent,...NB_MODULES]
 })
 
 
@@ -51,7 +52,7 @@ export class ThemeModule{
     static forRoot(): ModuleWithProviders {
         return <ModuleWithProviders>{
           ngModule: ThemeModule,
-          providers: [NbSidebarService,NbMenuService],
+          providers: [NbSidebarService,NbMenuService,NbMenuInternalService],
         };
       }
 }

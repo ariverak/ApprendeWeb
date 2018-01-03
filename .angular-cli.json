@@ -21,7 +21,12 @@
       "styles": [
         "styles.css",
         "../node_modules/bootstrap/dist/css/bootstrap.css",
-        "../node_modules/@nebular/theme/styles/prebuilt/cosmic.css"
+        "../node_modules/@nebular/theme/styles/prebuilt/cosmic.css",
+        "../node_modules/nebular-icons/scss/nebular-icons.scss",
+        "../node_modules/socicon/css/socicon.css",
+        "../node_modules/roboto-fontface/css/roboto/roboto-fontface.css",
+        "../node_modules/ionicons/scss/ionicons.scss",
+        "../node_modules/font-awesome/scss/font-awesome.scss"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
