@@ -3,8 +3,8 @@ import { NbMenuItem } from '@nebular/theme';
 export const MENU_ITEMS: NbMenuItem[] = [
   {
     title: 'Home',
-    icon: 'nb-home',
-    link: '/pages/dashboard',
+    icon: 'ion ion-android-home',
+    link: '/web/home',
     home: true,
   },
   {
@@ -12,41 +12,25 @@ export const MENU_ITEMS: NbMenuItem[] = [
     group: true,
   },
   {
-    title: 'Contenidos',
-    icon: 'nb-compose',
+    title: 'Planificaciónes',
+    icon: 'ion ion-document-text',
     children: [
       {
-        title: 'Contenidos1',
-        link: '/web/contenidos1',
-      },
-      {
-        title: 'Contenidos2',
-        link: '/web/contenidos1',
+        title: 'Contenidos',
+        link: '/web/plan-contenidos',
       },
     ],
   },
   {
-    title: '...',
-    icon: 'nb-gear'
+    title: 'Calificaciones',
+    icon: 'ion ion-ios-compose-outline'
   },
   {
-    title: '...',
-    icon: 'nb-location'
+    title: 'Correcciones',
+    icon: 'ion ion-android-checkmark-circle'
   },
   {
-    title: '...',
-    icon: 'nb-bar-chart'
-  },
-  {
-    title: '...',
-    icon: 'nb-title'
-  },
-  {
-    title: '...',
-    icon: 'nb-tables',
-  },
-  {
-    title: '...',
-    icon: 'nb-locked'
-  },
+    title: 'Mensajeria',
+    icon: 'ion ion-android-notifications-none'
+  }
 ];
