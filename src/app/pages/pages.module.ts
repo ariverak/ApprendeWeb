@@ -8,7 +8,6 @@ import { pagesComponents } from './components';
 import { PagesComponent } from './pages.component';
 import {PagesRoutingModule} from './pages-routing.module'
 import { ThemeModule } from '../theme/theme.module';
-import { FullCalendarModule } from 'ng-fullcalendar';
 
 import { NbThemeModule,NbCardModule,NbCheckboxModule,NbLayoutModule } from '@nebular/theme';
 const NB_MODULES = [
@@ -24,8 +23,7 @@ const NB_MODULES = [
         CommonModule,
         FormsModule,
         HttpModule,
-        ...NB_MODULES,
-        FullCalendarModule
+        ...NB_MODULES
     ],
     declarations : [...pagesComponents,PagesComponent],
     exports : []

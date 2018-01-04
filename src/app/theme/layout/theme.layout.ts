@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   selector: 'theme-layout',
   styleUrls: ['./theme.layout.scss'],
   template: `
-    <nb-layout>
+    <nb-layout windowMode>
       <nb-layout-header fixed>
         <theme-header></theme-header>
       </nb-layout-header>
@@ -22,7 +22,6 @@ import { Component } from '@angular/core';
       <nb-layout-column>
         <ng-content select="router-outlet"></ng-content>
       </nb-layout-column>
-
       <nb-layout-footer fixed>
         <!--<ngx-footer></ngx-footer>-->
       </nb-layout-footer>

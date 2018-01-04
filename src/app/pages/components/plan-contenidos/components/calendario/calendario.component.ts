@@ -1,6 +1,5 @@
 import { Component, OnInit,ViewChild  } from '@angular/core';
-import { CalendarComponent } from 'ng-fullcalendar';
-import { Options } from 'fullcalendar';
+import * as moment from 'moment';
 declare var $: any;
 @Component({
   selector: 'pc-calendario',
@@ -8,28 +7,18 @@ declare var $: any;
   styleUrls:['./calendario.component.css']
 })
 export class PCCalendarioComponent implements OnInit {
-  calendarOptions: Options;
-  @ViewChild(CalendarComponent) ucCalendar: CalendarComponent;
+  
   constructor() { 
-   
   }
   
   ngOnInit() {
-
-    this.calendarOptions = {
-      locale: 'es-us',
-      editable: true,
-      eventLimit: false,
-      
-      header: {
-        left:   'title',
-        center: '',
-        right:  'today prev,next'
-      },
-      events: [{
-        title: 'Matematicas',
-        start: '2018-01-01'
-      }]
-    };
+    $('#calendar').fullCalendar({
+      weekends: false, // will hide Saturdays and Sundays
+      locale: "es-us",
+      dayClick: function(e) {
+        let myMoment:moment.Moment = moment(e._i);
+        console.log(myMoment);
+      }
+  });
   }
 }
