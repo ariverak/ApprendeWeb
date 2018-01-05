@@ -3,30 +3,31 @@
       <div class="row select-container">
         <div class="col-lg-6">
           <div class="form-group">
-            <select class="form-control">
-              <option disabled>[Seleccione Curso]</option>
-              <option>Minsk</option>
-              <option>Gomel</option>
-              <option>Brest</option>
-              <option>Grodno</option>
-              <option>Mogilev</option>
+            <select [(ngModel)]="currentCurso" (ngModelChange)="changeCurso($event)" class="form-control">
+                <option *ngIf="cursos.length > 0"  [ngValue]="undefined" selected disabled>[Seleccione Curso]</option>
+                <option *ngIf="cursos.length == 0"  [ngValue]="undefined" selected disabled>No Hay Cursos Asociados</option>
+                <option *ngFor="let curso of cursos" [ngValue]="curso.Id">
+                  {{curso.Grado}} {{curso.Letra}}
+                </option>
             </select>
           </div>
         </div>
         <div class="col-lg-6">
           <div class="form-group">
-            <select class="form-control">
-              <option disabled>[Seleccione Asignatura]</option>
-              <option>Minsk</option>
-              <option>Gomel</option>
-              <option>Brest</option>
-              <option>Grodno</option>
-              <option>Mogilev</option>
-            </select>
+              <select [(ngModel)]="currentAsignatura" (ngModelChange)="changeAsignatura($event)"
+               *ngIf="currentCurso != null" class="form-control">
+                  <option *ngIf="asignaturas.length > 0"  [ngValue]="undefined" 
+                    selected disabled>[Seleccione Asignatura]</option>
+                  <option *ngIf="asignaturas.length == 0"  [ngValue]="undefined"
+                   selected disabled>No Hay Asignaturas Asociadas</option>
+                  <option *ngFor="let asignatura of asignaturas" [ngValue]="asignatura.Id">
+                    {{asignatura.Nombre}}
+                  </option>
+              </select>
           </div>
         </div>
       </div>
-    <nb-card-body class="row">
+    <nb-card-body *ngIf="currentAsignatura != null" class="row">
         <div class="col-md-6">
            <pc-unidades></pc-unidades>
         </div>

@@ -1,16 +1,17 @@
-import { CommonModule } from '@angular/common';  
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { HTTP_INTERCEPTORS,HttpClientModule } from '@angular/common/http';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
-import { FormsModule }   from '@angular/forms';
-import { routing,appRoutingProviders } from './app.routing';
-import { NbThemeModule } from '@nebular/theme';
+import { appRoutingProviders, routing } from './app.routing';
 import { AuthHttpInterceptor } from './services/http.interceptor';
 import { AuthModule } from './modules/auth/auth.module';
+import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { NbThemeModule } from '@nebular/theme';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgModule } from '@angular/core';
 import { PagesModule } from './modules/pages/pages.module';
+import { RouterModule } from '@angular/router';
+  
 
 @NgModule({
   declarations: [

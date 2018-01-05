@@ -14,12 +14,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
   {
     title: 'Planificaciónes',
     icon: 'ion ion-document-text',
-    children: [
-      {
-        title: 'Contenidos',
-        link: '/web/plan-contenidos',
-      },
-    ],
+    link: '/web/plan-contenidos'
   },
   {
     title: 'Calificaciones',
