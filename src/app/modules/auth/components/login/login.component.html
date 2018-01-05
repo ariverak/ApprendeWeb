@@ -15,19 +15,19 @@
     </div>
 
     <div class="form-group">
-      <label for="input-email" class="sr-only">Ingrese su correo electrónico</label>
-      <input name="email" [(ngModel)]="user.email" id="input-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control"
-        placeholder="Nombre de Usuario" #email="ngModel" [class.form-control-danger]="email.invalid && email.touched" 
+      <label for="input-nick" class="sr-only">Ingrese su correo electrónico</label>
+      <input name="nick" [(ngModel)]="Usuario.nick" id="input-nick"  class="form-control"
+        placeholder="Nombre de Usuario" #nick="ngModel" [class.form-control-danger]="nick.invalid && nick.touched" 
         [required]="true">
-      <small align="left" class="form-text error" *ngIf="email.invalid && email.touched && email.errors?.required">
+      <small align="left" class="form-text error" *ngIf="nick.invalid && nick.touched && nick.errors?.required">
         Correo requerido!</small>
-      <small align="left" class="form-text error" *ngIf="email.invalid && email.touched && email.errors?.pattern">
+      <small align="left" class="form-text error" *ngIf="nick.invalid && nick.touched && nick.errors?.pattern">
         Correo deberia ser uno real! </small>
     </div>
 
     <div class="form-group">
       <label for="input-password" class="sr-only">Contraseña</label>
-      <input name="password" [(ngModel)]="user.password" type="password" id="input-password" class="form-control" placeholder="Password"
+      <input name="password" [(ngModel)]="Usuario.password" type="password" id="input-password" class="form-control" placeholder="Password"
         #password="ngModel" [class.form-control-danger]="password.invalid && password.touched" [required]="true" [minlength]="3"
         [maxlength]="10">
       <small align="left" class="form-text error" *ngIf="password.invalid && password.touched && password.errors?.required">
@@ -42,7 +42,7 @@
     </div>
 
     <button [disabled]="!form.valid" class="btn btn-block btn-hero-success">Iniciar sesión</button>
-
+    <label>{{error}}</label>
   </form>
 
   <br>

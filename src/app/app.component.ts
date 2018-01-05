@@ -8,11 +8,16 @@ import { Router } from '@angular/router';
   `
 })
 export class AppComponent implements OnInit {
-  title = 'app';
+  title = 'Apprende';
  
   constructor(private router:Router) {
   }
   ngOnInit(){
-    this.router.navigate(["/web/plan-contenidos"]);
+    var session = localStorage.getItem("session");
+    if(session){
+      this.router.navigate(["/web/home"]);
+    }else{
+    this.router.navigate(["/auth/login"]);
+    }
   }
 }
