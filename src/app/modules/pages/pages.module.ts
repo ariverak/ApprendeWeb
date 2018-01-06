@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common'; 
 import {FormsModule} from '@angular/forms'; 
 import {HttpModule} from '@angular/http'; 
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule,NgbRadioGroup } from '@ng-bootstrap/ng-bootstrap';
 
 import { pagesComponents } from './components';
 import { PagesComponent } from './pages.component';
@@ -27,7 +27,7 @@ const NB_MODULES = [
         ...NB_MODULES
     ],
     declarations : [...pagesComponents,PagesComponent],
-    providers: [PlanContenidosService],
+    providers: [PlanContenidosService,NgbRadioGroup],
     exports : []
 })
 export class PagesModule{}

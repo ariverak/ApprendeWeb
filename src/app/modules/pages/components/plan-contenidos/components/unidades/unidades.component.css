@@ -1,4 +1,6 @@
-.pagination-container {
-  margin-top: 10px;
-  margin-left: 10px;
+.unidadesTitle{
+  text-align: center;
+}
+.headerUnidades {
+  border-bottom: 1px solid #342e73;
 }

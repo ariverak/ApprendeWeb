@@ -1,8 +1,9 @@
 .calendarContainer{
     display: flex;
     justify-content: center;
+    padding: 20px;
 }
 #calendar{
-    max-width: 400px;
-    max-height: 400px;
+    max-width: 350px;
+    max-height: 350px;
 }

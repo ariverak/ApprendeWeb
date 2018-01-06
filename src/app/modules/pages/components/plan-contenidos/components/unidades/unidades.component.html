@@ -1,24 +1,20 @@
-<nb-card class="row">
-    <div class="pagination-container">
-      <div class="btn-group btn-toggle-group btn-outline-toggle-group" data-toggle="buttons" [(ngModel)]="paginationModel" ngbRadioGroup>
-        <label ngbButtonLabel class="btn btn-outline-success">
-          <input ngbButton type="radio" [value]="1"> 1
-        </label>
-        <label ngbButtonLabel class="btn btn-outline-success">
-          <input ngbButton type="radio" [value]="2"> 2
-        </label>
-        <label ngbButtonLabel class="btn btn-outline-success">
-          <input ngbButton type="radio" [value]="3"> 3
-        </label>
-        <label ngbButtonLabel class="btn btn-outline-success">
-          <input ngbButton type="radio" [value]="4"> 4
-        </label>
-        <label ngbButtonLabel class="btn btn-outline-success">
-          <input ngbButton type="radio" [value]="5"> 5
-        </label>
+<nb-card>
+  <nb-card-body>
+    <div class="headerUnidades row">
+      <div class="col-sm-8">
+        <h5 class="unidadesTitle">Unidad 1</h5>
+        <h6 class="unidadesTitle">Aprendizajes Esperados</h6>
+      </div>
+      <div class="col-sm-4">
+          <div class="btn-group">
+              <button type="button" class="btn btn-primary btn-icon">
+                  <i class="nb-arrow-left"></i>
+                </button>
+                <button type="button" class="btn btn-primary btn-icon">
+                  <i class="nb-arrow-right"></i>
+                </button>
+          </div>
       </div>
     </div>
-  <nb-card-body>
-    <h5>Aprendizajes Esperados</h5>
   </nb-card-body>
 </nb-card>
