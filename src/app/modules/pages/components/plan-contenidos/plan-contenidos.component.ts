@@ -4,7 +4,7 @@ declare var $ : any;
 @Component({
   selector: 'pages-pc',
   templateUrl: './plan-contenidos.component.html',
-  styleUrls :["./plan-contenidos.component.css"]
+  styleUrls :["./plan-contenidos.component.css"],
 })
 export class PlanContenidosComponent implements OnInit {
   cursos = [];
@@ -24,6 +24,10 @@ export class PlanContenidosComponent implements OnInit {
           this.cursos = result;
         }
     });
+      $('.fc-event').draggable({
+        revert: true,      // immediately snap back to original position
+        revertDuration: 0  //
+      });
   }
   changeCurso($event) {
     this.planContenidosService.getAsignaturas($event).subscribe(result=>{

@@ -27,12 +27,15 @@
         "../node_modules/roboto-fontface/css/roboto/roboto-fontface.css",
         "../node_modules/ionicons/scss/ionicons.scss",
         "../node_modules/font-awesome/scss/font-awesome.scss",
-        "../node_modules/fullcalendar/dist/fullcalendar.min.css"
+        "../node_modules/fullcalendar/dist/fullcalendar.min.css",
+        "../node_modules/jquery-ui-dist/jquery-ui.min.css"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/jquery-ui-dist/jquery-ui.min.js",
         "../node_modules/moment/min/moment.min.js",
         "../node_modules/fullcalendar/dist/fullcalendar.min.js",
+        "../node_modules/fullcalendar/dist/locale-all.js",
         "../node_modules/fullcalendar/dist/locale-all.js"
       ],
       "environmentSource": "environments/environment.ts",

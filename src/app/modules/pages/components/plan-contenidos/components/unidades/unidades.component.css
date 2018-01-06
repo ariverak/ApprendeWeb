@@ -4,3 +4,39 @@
 .headerUnidades {
   border-bottom: 1px solid #342e73;
 }
+.unidadesContainer{
+  padding: 10px;
+}
+#external-events {
+  float: left;
+  width: 150px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+  
+#external-events h4 {
+  font-size: 16px;
+  margin-top: 0;
+  padding-top: 1em;
+}
+  
+#external-events .fc-event {
+  margin: 10px 0;
+}
+  
+#external-events p input {
+  margin: 0;
+  vertical-align: middle;
+}
+.grabbable {
+  cursor: move; /* fallback if grab cursor is unsupported */
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+.grabbable:active { 
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
