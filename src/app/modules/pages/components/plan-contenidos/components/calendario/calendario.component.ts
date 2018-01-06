@@ -12,7 +12,7 @@ export class PCCalendarioComponent implements OnInit {
   }
   
   ngOnInit() {
-    $('#calendar').fullCalendar({
+    $('.calendar').fullCalendar({
       weekends: false, // will hide Saturdays and Sundays
       locale: "es-us",
       dayClick: function(e) {
