@@ -5,7 +5,7 @@ import {HttpModule} from '@angular/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { pagesComponents } from './components';
 import { PagesComponent } from './pages.component';
-import { PlanContenidosService } from './services/plan-contenidos-services/plan-contenidos.service';
+import { pagesServices } from './services/';
 import {PagesRoutingModule} from './pages-routing.module'
 import { ThemeModule } from '../theme/theme.module';
 import { TreeModule } from 'ng2-tree';
@@ -26,7 +26,7 @@ const NB_MODULES = [
         ...NB_MODULES
     ],
     declarations : [...pagesComponents,PagesComponent],
-    providers: [PlanContenidosService],
+    providers: [...pagesServices],
     exports : []
 })
 export class PagesModule{}

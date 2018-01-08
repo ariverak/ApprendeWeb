@@ -7,18 +7,26 @@ import { TreeModel } from 'ng2-tree';
 })
 export class PCUnidadesComponent implements OnInit {
 
+  currentUnidad:any;
+  currentIndex:number = 0;
+  unidades:any[] = [
+    {number:1,title:"Energias"},
+    {number:2,title:"El sistema solar"},
+    {number:3,title:"Las Plantas"}
+  ]
   constructor() { }
-  // tree: TreeModel = {
-  //   value: 'Aplican el álgebra de conjuntos en la resolución de problemas.',
-  //   children: [{
-  //     value: 'Teoria de Conjuntos',
-  //   }, {
-  //     value: 'Igualdad entre Conjuntos'
-  //   },
-  //   {
-  //     value: 'Igualdad entre Conjuntos'
-  //   }]
-  // };
+
   ngOnInit() {
+    this.currentUnidad = this.unidades[this.currentIndex];
+  }
+  contenidosBack(){
+    this.currentIndex = --this.currentIndex;
+    console.log(this.currentIndex);
+    this.currentUnidad = this.unidades[this.currentIndex];
+  }
+  contenidosNext(){
+    this.currentIndex = ++this.currentIndex;
+    console.log(this.currentIndex);
+    this.currentUnidad = this.unidades[this.currentIndex];
   }
 }

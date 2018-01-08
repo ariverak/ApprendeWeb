@@ -1,5 +1,8 @@
 .unidadesTitle{
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .headerUnidades {
   border-bottom: 1px solid #342e73;
@@ -7,11 +10,10 @@
 .unidadesContainer{
   padding: 10px;
 }
+
 #external-events {
   float: left;
-  width: 150px;
   padding: 0 10px;
-  border: 1px solid #ccc;
   text-align: left;
 }
   

@@ -26,6 +26,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
   },
   {
     title: 'Mensajeria',
-    icon: 'ion ion-android-notifications-none'
+    icon: 'ion ion-android-notifications-none',
+    link : '/web/mensajeria'
   }
 ];

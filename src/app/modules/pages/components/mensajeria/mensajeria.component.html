@@ -1,0 +1,19 @@
+<div class="row cardContainer">
+  <nb-card [size]="medium" class="contactosCard">
+    <nb-tabset fullWidth>
+      <nb-tab tabTitle="Alumnos">
+        <div class="contact" *ngFor="let c of contacts">
+          <!-- [title]="c.type"-->
+          <nb-user [picture]="picture" [name]="c.Nombre" size="large"></nb-user>
+          <i class="i-contact nb-email"></i>
+        </div>
+      </nb-tab>
+      <nb-tab tabTitle="Recientes">
+        <div class="contact" *ngFor="let c of recent">
+          <nb-user [picture]="picture" [name]="c.Nombre"  size="large"></nb-user>
+          <span class="time">{{ c.time }}</span>
+        </div>
+      </nb-tab>
+    </nb-tabset>
+  </nb-card>
+</div>

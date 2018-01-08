@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PlanContenidosService } from '../../services/plan-contenidos-services/plan-contenidos.service';
+import { PlanContenidosService } from '../../services/plan-contenidos.service';
 declare var $ : any;
 @Component({
   selector: 'pages-pc',
@@ -26,7 +26,9 @@ export class PlanContenidosComponent implements OnInit {
     });
       $('.fc-event').draggable({
         revert: true,      // immediately snap back to original position
-        revertDuration: 0  //
+        revertDuration: 0,
+        scroll: false,
+        handle: '.unidadesCard'
       });
   }
   changeCurso($event) {
