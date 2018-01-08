@@ -10,24 +10,26 @@
 .unidadesContainer{
   padding: 10px;
 }
-
-#external-events {
+.external-events h4{
+  text-align: justify;
+}
+.external-events {
   float: left;
   padding: 0 10px;
   text-align: left;
 }
   
-#external-events h4 {
+.external-events h4 {
   font-size: 16px;
   margin-top: 0;
   padding-top: 1em;
 }
   
-#external-events .fc-event {
+.external-events .fc-event {
   margin: 10px 0;
 }
   
-#external-events p input {
+.external-events p input {
   margin: 0;
   vertical-align: middle;
 }
