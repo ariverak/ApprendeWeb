@@ -3,7 +3,8 @@ import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms'; 
 import {HttpModule} from '@angular/http'; 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { pagesComponents } from './components';
+import { pagesComponents,ModalComponent } from './components';
+import { CKEditorModule } from 'ng2-ckeditor';
 import { PagesComponent } from './pages.component';
 import { pagesServices } from './services/';
 import {PagesRoutingModule} from './pages-routing.module'
@@ -19,13 +20,17 @@ const NB_MODULES = [
         NbThemeModule.forRoot({name:"cosmic"}),
         NgbModule.forRoot(),
         ThemeModule.forRoot(),
+        CKEditorModule,
         PagesRoutingModule,
         CommonModule,
         FormsModule,
         HttpModule,
         ...NB_MODULES
     ],
-    declarations : [...pagesComponents,PagesComponent],
+    declarations : [...pagesComponents,PagesComponent,ModalComponent],
+    entryComponents: [
+        ModalComponent,
+      ],
     providers: [...pagesServices],
     exports : []
 })

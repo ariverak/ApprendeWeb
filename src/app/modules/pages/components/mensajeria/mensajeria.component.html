@@ -5,7 +5,7 @@
         <div class="contact" *ngFor="let c of contacts">
           <!-- [title]="c.type"-->
           <nb-user [picture]="picture" [name]="c.Nombre" size="large"></nb-user>
-          <i class="i-contact nb-email"></i>
+          <i (click)="showLargeModal()" class="i-contact nb-email"></i>
         </div>
       </nb-tab>
       <nb-tab tabTitle="Recientes">

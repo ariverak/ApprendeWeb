@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core'
 import { NbThemeService, NbMediaBreakpoint, NbMediaBreakpointsService } from '@nebular/theme';
 import { MensajeriaService } from '../../services/mensajeria.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModalComponent } from './modal/modal.component';
 
 @Component({
   selector: 'pages-mensajeria',
@@ -11,7 +13,7 @@ export class MensajeriaComponent implements OnInit {
   contacts: any[];
   recent: any[];
   picture:any = "assets/alumno_icon.png"
-  constructor(private mensajeriaService:MensajeriaService) {
+  constructor(private mensajeriaService:MensajeriaService,private modalService: NgbModal) {
 
      }
 
@@ -24,4 +26,8 @@ export class MensajeriaComponent implements OnInit {
     });
   }
 
+  showLargeModal() {
+    const activeModal = this.modalService.open(ModalComponent, { size: 'lg', container: 'nb-layout' });
+    activeModal.componentInstance.modalHeader = 'Large Modal';
+  }
 }
